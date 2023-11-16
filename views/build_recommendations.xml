@@ -1,0 +1,35 @@
+```xml
+<odoo>
+    <data>
+        <record id="view_build_recommendations" model="ir.ui.view">
+            <field name="name">build.recommendations.view</field>
+            <field name="model">build.recommendations</field>
+            <field name="arch" type="xml">
+                <tree string="Build Recommendations">
+                    <field name="user_id"/>
+                    <field name="components"/>
+                    <field name="configuration"/>
+                    <field name="customization"/>
+                    <field name="price"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_build_recommendations" model="ir.actions.act_window">
+            <field name="name">Build Recommendations</field>
+            <field name="res_model">build.recommendations</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your first Build Recommendation
+                </p>
+                <p>
+                    Click on create to start recommending a build.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="build_recommendations_menu" name="Build Recommendations" parent="custom_pc_module.menu_custom_pc_module" sequence="6" action="action_build_recommendations"/>
+    </data>
+</odoo>
+```

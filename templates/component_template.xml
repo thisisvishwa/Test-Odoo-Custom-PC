@@ -1,0 +1,41 @@
+```xml
+<odoo>
+    <data>
+        <!-- Component Selection Template -->
+        <record id="component_selection_template" model="ir.ui.view">
+            <field name="name">component.selection.template</field>
+            <field name="model">component.selection</field>
+            <field name="arch" type="xml">
+                <!-- Add your XML code here for the component selection page -->
+            </field>
+        </record>
+
+        <!-- Component Configuration Template -->
+        <record id="component_configuration_template" model="ir.ui.view">
+            <field name="name">component.configuration.template</field>
+            <field name="model">component.configuration</field>
+            <field name="arch" type="xml">
+                <!-- Add your XML code here for the component configuration page -->
+            </field>
+        </record>
+
+        <!-- Component Customization Template -->
+        <record id="component_customization_template" model="ir.ui.view">
+            <field name="name">component.customization.template</field>
+            <field name="model">component.customization</field>
+            <field name="arch" type="xml">
+                <!-- Add your XML code here for the component customization page -->
+            </field>
+        </record>
+
+        <!-- Component Pricing Template -->
+        <record id="component_pricing_template" model="ir.ui.view">
+            <field name="name">component.pricing.template</field>
+            <field name="model">component.pricing</field>
+            <field name="arch" type="xml">
+                <!-- Add your XML code here for the component pricing page -->
+            </field>
+        </record>
+    </data>
+</odoo>
+```

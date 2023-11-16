@@ -1,0 +1,41 @@
+```xml
+<odoo>
+    <data>
+        <record id="view_build_import_export_form" model="ir.ui.view">
+            <field name="name">build.import.export.form</field>
+            <field name="model">build</field>
+            <field name="arch" type="xml">
+                <form string="Build Import/Export">
+                    <sheet>
+                        <group>
+                            <field name="user_id"/>
+                            <field name="components"/>
+                            <field name="configuration"/>
+                            <field name="customization"/>
+                            <field name="price"/>
+                        </group>
+                        <group>
+                            <field name="build_history"/>
+                            <field name="build_recommendations"/>
+                            <field name="build_sharing"/>
+                            <field name="build_import_export"/>
+                            <field name="build_analytics"/>
+                            <field name="build_support"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_build_import_export" model="ir.actions.act_window">
+            <field name="name">Build Import/Export</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">build</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_build_import_export_form"/>
+        </record>
+
+        <menuitem id="menu_build_import_export" name="Build Import/Export" parent="base.menu_custom" sequence="20" action="action_build_import_export"/>
+    </data>
+</odoo>
+```

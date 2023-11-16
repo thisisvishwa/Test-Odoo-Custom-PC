@@ -1,0 +1,65 @@
+```xml
+<odoo>
+    <data>
+        <record id="view_build_support_form" model="ir.ui.view">
+            <field name="name">build.support.form</field>
+            <field name="model">build.support</field>
+            <field name="arch" type="xml">
+                <form string="Build Support">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="user_id"/>
+                            <field name="components"/>
+                            <field name="configuration"/>
+                            <field name="customization"/>
+                            <field name="price"/>
+                            <field name="build_history"/>
+                            <field name="build_recommendations"/>
+                            <field name="build_sharing"/>
+                            <field name="build_import_export"/>
+                            <field name="build_analytics"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_build_support_tree" model="ir.ui.view">
+            <field name="name">build.support.tree</field>
+            <field name="model">build.support</field>
+            <field name="arch" type="xml">
+                <tree string="Build Support">
+                    <field name="name"/>
+                    <field name="user_id"/>
+                    <field name="components"/>
+                    <field name="configuration"/>
+                    <field name="customization"/>
+                    <field name="price"/>
+                    <field name="build_history"/>
+                    <field name="build_recommendations"/>
+                    <field name="build_sharing"/>
+                    <field name="build_import_export"/>
+                    <field name="build_analytics"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_build_support" model="ir.actions.act_window">
+            <field name="name">Build Support</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">build.support</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your first Build Support
+                </p><p>
+                    Here you can manage your build support.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_build_support" name="Build Support" parent="custom_pc_module.menu_custom_pc_module" sequence="10" action="action_build_support"/>
+    </data>
+</odoo>
+```
